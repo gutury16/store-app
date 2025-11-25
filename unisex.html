@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMIR — Унисекс</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav>
+        <button class="mobile-menu-toggle" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">AMIR</a></div>
+
+        <ul class="nav-links">
+            <li><a href="index.html#products">Новинки</a></li>
+            <li><a href="women.html">Женщинам</a></li>
+            <li><a href="men.html">Мужчинам</a></li>
+            <li><a href="unisex.html" class="active">Унисекс</a></li>
+            <li><a href="accessories.html">Аксессуары</a></li>
+        </ul>
+
+            <div class="header-icons">
+                <button class="icon-btn search-btn" aria-label="Поиск">
+                    <img src="images/search.png" alt="Поиск">
+                </button>
+                <button class="icon-btn login-btn" aria-label="Вход" onclick="window.location.href='login.html'">
+                    <img src="images/user.png" alt="Вход">
+                </button>
+                <button class="icon-btn profile-btn" aria-label="Профиль" onclick="window.location.href='profile.html'" style="display: none;">
+                    <img src="images/user.png" alt="Профиль">
+                </button>
+                <button class="icon-btn cart-btn" aria-label="Корзина">
+                    <img src="images/shopping-cart.png" alt="Корзина">
+                    <span id="cart-count" class="cart-count"></span>
+                </button>
+            </div>
+    </nav>
+</header>
+
+<section class="hero" style="background-image: url('images/IMG_0898.JPG');">
+    <div class="hero-content">
+        <h1>Унисекс коллекция<br>2024</h1>
+        <p>Стиль без границ для всех</p>
+        <a href="#products" class="cta-button">СМОТРЕТЬ КОЛЛЕКЦИЮ</a>
+    </div>
+</section>
+
+<section class="products" id="products">
+    <h2>Унисекс коллекция</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/hudi.avif" alt="Худи унисекс">
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    Худи унисекс<div class="product-new">NEW!</div>
+                </div>
+                <div class="product-price">14 990₸</div>
+                <button class="add-to-cart-btn">В корзину</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/shirt.webp" alt="Футболка унисекс">
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    Футболка унисекс<div class="product-new">NEW!</div>
+                </div>
+                <div class="product-price">4 990₸</div>
+                <button class="add-to-cart-btn">В корзину</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/jeans.jpg" alt="Джинсы унисекс">
+            </div>
+            <div class="product-info">
+                <div class="product-name">Джинсы унисекс</div>
+                <div class="product-price">8 990₸</div>
+                <button class="add-to-cart-btn">В корзину</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/hudi.avif" alt="Свитшот унисекс">
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    Свитшот унисекс<div class="product-new">NEW!</div>
+                </div>
+                <div class="product-price">11 990₸</div>
+                <button class="add-to-cart-btn">В корзину</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/coat.webp" alt="Куртка унисекс">
+            </div>
+            <div class="product-info">
+                <div class="product-name">Куртка унисекс</div>
+                <div class="product-price">15 990₸</div>
+                <button class="add-to-cart-btn">В корзину</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/shirt.webp" alt="Рубашка унисекс">
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    Рубашка унисекс<div class="product-new">NEW!</div>
+                </div>
+                <div class="product-price">6 990₸</div>
+                <button class="add-to-cart-btn">В корзину</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/jeans.jpg" alt="Шорты унисекс">
+            </div>
+            <div class="product-info">
+                <div class="product-name">Шорты унисекс</div>
+                <div class="product-price">5 990₸</div>
+                <button class="add-to-cart-btn">В корзину</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/hudi.avif" alt="Толстовка унисекс">
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    Толстовка унисекс<div class="product-new">NEW!</div>
+                </div>
+                <div class="product-price">9 990₸</div>
+                <button class="add-to-cart-btn">В корзину</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/coat.webp" alt="Парка унисекс">
+            </div>
+            <div class="product-info">
+                <div class="product-name">Парка унисекс</div>
+                <div class="product-price">18 990₸</div>
+                <button class="add-to-cart-btn">В корзину</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/shirt.webp" alt="Поло унисекс">
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    Поло унисекс<div class="product-new">NEW!</div>
+                </div>
+                <div class="product-price">7 490₸</div>
+                <button class="add-to-cart-btn">В корзину</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/jeans.jpg" alt="Брюки унисекс">
+            </div>
+            <div class="product-info">
+                <div class="product-name">Брюки унисекс</div>
+                <div class="product-price">10 990₸</div>
+                <button class="add-to-cart-btn">В корзину</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/hudi.avif" alt="Ветровка унисекс">
+            </div>
+            <div class="product-info">
+                <div class="product-name">
+                    Ветровка унисекс<div class="product-new">NEW!</div>
+                </div>
+                <div class="product-price">12 990₸</div>
+                <button class="add-to-cart-btn">В корзину</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="promo">
+    <div class="promo-content">
+        <h2>Скидка 30% на все</h2>
+        <p>Только до конца недели! Используйте промокод при оформлении заказа</p>
+        <div class="promo-code">AMIR67</div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>О магазине</h3>
+            <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Наши магазины</a></li>
+                <li><a href="#">Вакансии</a></li>
+                <li><a href="#">Отзывы</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Покупателям</h3>
+            <ul>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">Возврат товара</a></li>
+                <li><a href="#">Размерная сетка</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Контакты</h3>
+            <ul>
+                <li><a href="tel:+77001234567">+7 700 123 45 67</a></li>
+                <li><a href="mailto:info@vibe.kz">amir@amir.kz</a></li>
+                <li>Алматы, Абылай хана 1/1</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Мы в соцсетях</h3>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">TikTok</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 AMIR Fashion Store. Все права защищены.</p>
+    </div>
+</footer>
+
+<div id="cart-overlay" class="cart-overlay"></div>
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h2>Корзина</h2>
+        <button id="cart-close" class="cart-close">&times;</button>
+    </div>
+    <div class="cart-content">
+        <div id="empty-cart-message" class="empty-cart-message">
+            <p>Ваша корзина пуста</p>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Итого:</span>
+            <span id="cart-total">0₸</span>
+        </div>
+        <button id="checkout-btn" class="checkout-button">Оформить заказ</button>
+    </div>
+</div>
+
+    <div id="search-overlay" class="search-overlay"></div>
+    <div id="search-modal" class="search-modal">
+        <div class="search-header">
+            <h2>Поиск товаров</h2>
+            <button id="search-close" class="search-close">&times;</button>
+        </div>
+        <div class="search-content">
+            <input type="text" id="search-input" class="search-input" placeholder="Введите название товара...">
+            <div id="search-results-count" class="search-results-count"></div>
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
+
+    <script src="Script.js"></script>
+    <script src="auth.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
+

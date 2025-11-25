@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMIR — Оформление заказа</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="mobile-menu-toggle" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">AMIR</a></div>
+
+            <ul class="nav-links">
+                <li><a href="index.html#products">Новинки</a></li>
+                <li><a href="women.html">Женщинам</a></li>
+                <li><a href="men.html">Мужчинам</a></li>
+                <li><a href="unisex.html">Унисекс</a></li>
+                <li><a href="accessories.html">Аксессуары</a></li>
+            </ul>
+
+            <div class="header-icons">
+                <button class="icon-btn search-btn" aria-label="Поиск">
+                    <img src="images/search.png" alt="Поиск">
+                </button>
+                <button class="icon-btn login-btn" aria-label="Вход" onclick="window.location.href='login.html'">
+                    <img src="images/user.png" alt="Вход">
+                </button>
+                <button class="icon-btn profile-btn" aria-label="Профиль" onclick="window.location.href='profile.html'" style="display: none;">
+                    <img src="images/user.png" alt="Профиль">
+                </button>
+                <button class="icon-btn cart-btn" aria-label="Корзина">
+                    <img src="images/shopping-cart.png" alt="Корзина">
+                    <span id="cart-count" class="cart-count"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="checkout-container">
+        <h1>Оформление заказа</h1>
+        
+        <div class="checkout-content">
+            <div class="checkout-form-section">
+                <form id="checkout-form" class="checkout-form">
+                    <h2>Контактная информация</h2>
+                    
+                    <div class="form-group">
+                        <label for="name">ФИО *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Телефон *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+7 700 123 45 67" required>
+                    </div>
+
+                    <h2>Адрес доставки</h2>
+
+                    <div class="form-group">
+                        <label for="address">Адрес *</label>
+                        <input type="text" id="address" name="address" placeholder="Город, улица, дом, квартира" required>
+                    </div>
+
+                    <h2>Способ оплаты</h2>
+
+                    <div class="form-group">
+                        <label class="radio-label">
+                            <input type="radio" name="payment" value="card" checked>
+                            <span>Банковская карта</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="payment" value="cash">
+                            <span>Наличными при получении</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Комментарий к заказу</label>
+                        <textarea id="comments" name="comments" rows="4" placeholder="Дополнительные пожелания"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-order-btn">Оформить заказ</button>
+                </form>
+            </div>
+
+            <div class="checkout-summary">
+                <h2>Ваш заказ</h2>
+                
+                <div id="checkout-items" class="checkout-items"></div>
+
+                <div class="promo-section">
+                    <label for="promo-code-input">Промокод</label>
+                    <div class="promo-input-group">
+                        <input type="text" id="promo-code-input" placeholder="Введите промокод">
+                        <button type="button" onclick="applyPromoCode()" class="apply-promo-btn">Применить</button>
+                    </div>
+                    <div id="promo-message" class="promo-message"></div>
+                </div>
+
+                <div class="checkout-totals">
+                    <div class="checkout-total-row">
+                        <span>Товары:</span>
+                        <span id="checkout-subtotal">0₸</span>
+                    </div>
+                    <div class="checkout-total-row" id="discount-row" style="display: none;">
+                        <span>Скидка:</span>
+                        <span id="checkout-discount">0₸</span>
+                    </div>
+                    <div class="checkout-total-row checkout-total-final">
+                        <span>Итого:</span>
+                        <span id="checkout-total">0₸</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="cart-overlay" class="cart-overlay"></div>
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Корзина</h2>
+            <button id="cart-close" class="cart-close">&times;</button>
+        </div>
+        <div class="cart-content">
+            <div id="empty-cart-message" class="empty-cart-message">
+                <p>Ваша корзина пуста</p>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Итого:</span>
+                <span id="cart-total">0₸</span>
+            </div>
+            <button id="checkout-btn" class="checkout-button">Оформить заказ</button>
+        </div>
+    </div>
+
+    <div id="search-overlay" class="search-overlay"></div>
+    <div id="search-modal" class="search-modal">
+        <div class="search-header">
+            <h2>Поиск товаров</h2>
+            <button id="search-close" class="search-close">&times;</button>
+        </div>
+        <div class="search-content">
+            <input type="text" id="search-input" class="search-input" placeholder="Введите название товара...">
+            <div id="search-results-count" class="search-results-count"></div>
+            <div id="search-results" class="search-results"></div>
+        </div>
+    </div>
+
+    <script src="Script.js"></script>
+    <script src="auth.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
+
